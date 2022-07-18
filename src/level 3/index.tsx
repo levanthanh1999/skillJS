@@ -101,6 +101,16 @@ const Main3 = () => {
     console.log(`You are left with ${result} years to drive.`);
   }
 
+  / Tạo prompt >= 18 và ngược lại
+  let valueInput: number = Number(prompt('Enter your age:'));
+
+  if(valueInput >= 18) {
+    console.log('You are old enough to drive');
+  } else {
+    let result = 18 - valueInput;
+    console.log(`You are left with ${result} years to drive.`);
+  }
+
   
   return (
   <>
