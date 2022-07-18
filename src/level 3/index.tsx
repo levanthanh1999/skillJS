@@ -6,6 +6,7 @@ const Main3 = () => {
   console.log(ages.sort());
   const minAge = ages[0];
   const maxAge = ages[ages.length - 1];
+  console.log(123);
 
   // Tìm độ tuổi trung bình (Median arr)
   // console.log(ages[ages.length/2])
