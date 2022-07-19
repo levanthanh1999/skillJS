@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 const Main3 = () => {
   // 1 Sort arr, tìm min max
@@ -67,8 +67,6 @@ const Main3 = () => {
   // let arr2 = countries.slice(5, 11)
   // console.log(arr2);
 
-  
-
   // Tách mảng nếu mảng lẻ thêm việt nam vào đầu mảng lẻ
 
   let coun1: string[] = [];
@@ -92,21 +90,78 @@ const Main3 = () => {
   // }
 
   // Tạo prompt >= 18 và ngược lại
-  let valueInput: number = Number(prompt('Enter your age:'));
+  // let valueInput: number = Number(prompt("Enter your age:"));
 
-  if(valueInput >= 18) {
-    console.log('You are old enough to drive');
-  } else {
-    let result = 18 - valueInput;
-    console.log(`You are left with ${result} years to drive.`);
-  }
+  // if (valueInput >= 18) {
+  //   console.log("You are old enough to drive");
+  // } else {
+  //   let result = 18 - valueInput;
+  //   console.log(`You are left with ${result} years to drive.`);
+  // }
 
+  // Tìm theo điểm
+  // let valueScore: number = Number(prompt("Nhập Score: "));
+
+  // switch (true) {
+  //   case valueScore < 50:
+  //     console.log("Bạn được hạng F");
+  //     break;
+  //   case valueScore >= 50 && valueScore <= 59:
+  //     console.log("Bạn được hạng D");
+  //     break;
+  //   case valueScore >= 60 && valueScore <= 69:
+  //     console.log("Bạn được hạng C");
+  //     break;
+  //   case valueScore >= 70 && valueScore <= 79:
+  //     console.log("Bạn được hạng B");
+  //     break;
+  //   case valueScore >= 80 && valueScore <= 100:
+  //     console.log("Bạn được hạng A");
+  //     break;
+  //   default:
+  //     console.log('Bạn đã nhập sai score vui lòng nhập lại')
+  // }
   
-  return (
-  <>
-  </>
+
+
+  // Nếu chữ thường hoặc chữ hoa sẽ in ra giá trị và khác sẽ trả về cc
+  // let valueInput: string | null = prompt("What is the day today");
+  // let saturday: string = "Saturday";
+  // let friday: string = "Friday";
+
+  // if (
+  //   valueInput?.toLocaleLowerCase() === saturday.toLocaleLowerCase() ||
+  //   valueInput?.toLocaleUpperCase() === saturday.toLocaleUpperCase()
+  // ) {
+  //   alert("Saturday is a weekend");
+  // } else if (
+  //   valueInput?.toLocaleLowerCase() === friday.toLocaleLowerCase() ||
+  //   valueInput?.toLocaleUpperCase() === friday.toLocaleUpperCase()
+  // ) {
+  //   alert("Friday is a working day");
+  // } else {
+  //   alert("cc");
+  // }
+
+
+  let valueInput = prompt('Enter a Month')
+  const valueYearMonth = (year:number, month:number) => ( 
+     new Date(year, month, 0).getDate()
   )
+
+  let July = valueYearMonth(2022, 7)
+
+  let January = valueYearMonth(2022, 6)
+  
+  let JulyMonth = 'July'
+  let JanuaryMonth = 'January'
+
+  if(valueInput?.toLocaleLowerCase() === JulyMonth.toLocaleLowerCase() || valueInput?.toLocaleUpperCase() === JulyMonth.toLocaleUpperCase()) {
+    alert(`July has ${July} days`)
+  } else if (valueInput?.toLocaleLowerCase() === JanuaryMonth.toLocaleLowerCase() || valueInput?.toLocaleUpperCase() === JanuaryMonth.toLocaleUpperCase()) {
+    alert(`January has ${January} days`)
+  }
+  return <></>;
 };
 
 export default Main3;
-
